@@ -4,6 +4,7 @@
     settings = {
       main = {
         font = "JetBrains Mono Nerd Font 10.6";
+	filter-desktop = true;
         width = 40;
         lines = 8;
         line-height = 30;
@@ -12,18 +13,17 @@
         dpi-aware = "no";
       };
       colors = {
-        background = "FB958BFF";
-        text = "c0caf5ff";
-        match = "C0CAF5FF";
-	opacity = "0.5";
-        selection = "FB958BFF";
-        selection-match = "FB958BFF";
-        selection-text = "c0caf5ff";
-        border = "0x66333333";
+        background = "000000fc";
+        text = "D8DEE9FF";
+        match = "1A1B26FF";
+        selection = "23272EFF";
+        selection-match = "88C0D0FF";
+        selection-text = "fff";
+        border = "3b425200";
       };
-      border = {
-        width = 2;
-      };
+    border = {
+    	width = 3;
+    };
     };
   };
 }

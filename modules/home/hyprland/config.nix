@@ -39,9 +39,9 @@
         layout = "dwindle";
         gaps_in = 5;
         gaps_out = 8;
-        border_size = 2;
-        "col.active_border" = "0xff5e81ac";
-	"col.inactive_border" = "0x66333333";
+        border_size = 0;
+        #"col.active_border" = "0xff5e81ac";
+	#"col.inactive_border" = "0x66333333";
       };
 
       misc = {
@@ -71,7 +71,7 @@
       };
 
       decoration = {
-        rounding = 8;
+        rounding = 12;
         # active_opacity = 0.90;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;
@@ -91,11 +91,11 @@
         #shadow_offset = "0 2";
         #shadow_range = 15;
         #shadow_render_power = 3;
-        #"col.shadow" = "0xffa7caff";
-        #"col.shadow_inactive" = "0x50000000";
+       # "col.shadow" = "0x0";
+        #"col.shadow_inactive" = "0x0";
       };
 
-      blurls=["waybar" "lockscreen"];
+      blurls=["waybar" "lockscreen" "fuzzel"];
 
       animations = {
         enabled = true;

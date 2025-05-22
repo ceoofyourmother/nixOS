@@ -9,13 +9,13 @@
     margin-left= 10;
     margin-right= 10;
     spacing = 5;
-    modules-left = ["custom/launcher" "cpu" "memory" "hyprland/workspaces" "custom/weather"];
+    modules-left = ["cpu" "memory" "hyprland/workspaces" "custom/weather"];
     modules-center= [
         "custom/spotify"
     ];
-    modules-right= ["tray" "pulseaudio" "clock"];
+    modules-right= ["pulseaudio" "clock" "tray"];
     clock= {
-        format = "<span color='#bf616a'> </span>{:%a %b %d}";
+        format = "󰃰  {:%a, %b %e %H:%M }";
         tooltip= "true";
         tooltip-format= "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format-alt= "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>";
@@ -67,6 +67,12 @@
         format-muted= "  {volume}%";
         format-icons= {
             default= [" "];
+            headphone = " ";
+            hands-free = " ";
+            headset =" ";
+            phone = " ";
+            portable = " ";
+            car = " ";
         };
         scroll-step= 5;
         on-click= "pamixer -t";

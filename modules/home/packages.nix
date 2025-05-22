@@ -42,10 +42,15 @@ in
     winetricks
     wineWowPackages.wayland
 
-    # C / C++
+    #Dev
     gcc
     gnumake
-
+    go
+    rustc
+    cargo
+    nodejs
+    pnpm
+   
     # Python
     python3
 
