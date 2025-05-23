@@ -23,6 +23,8 @@
   ascii = pkgs.writeScriptBin "ascii" (builtins.readFile ./scripts/ascii.sh);
   
   record = pkgs.writeScriptBin "record" (builtins.readFile ./scripts/record.sh);
+
+ # spotifysh = pkgs.writeScriptBin "spotify" (builtins.readFile ./scripts/spotify.sh);
 in {
   home.packages = with pkgs; [
     wall-change
@@ -49,5 +51,7 @@ in {
     ascii
 
     record
+
+    #spotifysh
   ];
 }

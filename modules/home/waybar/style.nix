@@ -231,15 +231,6 @@ label:focus {
   color: #f53c3c;
 }
 
-#custom-media {
-  background-color: #66cc99;
-  color: #2a5c45;
-  min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-  background-color: #66cc99;
-}
 
 #custom-media.custom-vlc {
   background-color: #ffa000;
@@ -285,6 +276,10 @@ label:focus {
 
 #mpd.paused {
   color: #51a37a;
+  color: #c0caf5;
+  border-radius: 7px;
+  margin-right: 5px;
+  border-right: 0px;
 }
 
 #language {
@@ -307,11 +302,9 @@ label:focus {
   padding: 0 5px;
 }
 
-#custom-spotify {
-  padding: 0 10px;
-  margin: 0 4px;
-  /* background-color: #1db954; */
-  color: #abb2bf;
+#mpris {
+  color: #cdd6f4;
+  opacity: 0.8;
 }
 
 #keyboard-state > label.locked {

@@ -11,9 +11,10 @@
     ++ [(import ./gtk.nix)]                       # gtk theme
     ++ [(import ./hyprland)]                      # window manager
     ++ [(import ./kitty.nix)]                     # terminal
+   # ++ [(import ./alacritty.nix)]
     ++ [(import ./swaync/swaync.nix)]             # notification deamon
     ++ [(import ./micro.nix)]                     # nano replacement
-    ++ [(import ./nvim.nix)]                      # neovim editor
+    ++ [(import ./nvim)]                      # neovim editor
     ++ [(import ./packages.nix)]                  # other packages
     ++ [(import ./retroarch.nix)]
     ++ [(import ./scripts/scripts.nix)]           # personal scripts

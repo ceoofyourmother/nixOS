@@ -11,7 +11,7 @@ in
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
   programs.spicetify = {
-    enable = true;
+    enable = false;
      enabledExtensions = with spicePkgs.extensions; [
        hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)

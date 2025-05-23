@@ -34,6 +34,7 @@ in
     soundwireserver                   # pass audio to android phone
     tdf                               # cli pdf viewer
     todo                              # cli todo list
+    spotify
     toipe                             # typing test in the terminal
     valgrind                          # c memory analyzer
     yazi                              # terminal file manager
@@ -53,6 +54,8 @@ in
    
     # Python
     python3
+    gtk3
+    vlc
 
     bleachbit                         # cache cleaner
     cmatrix
@@ -61,7 +64,8 @@ in
     imv                               # image viewer
     killall
     libnotify
-	  man-pages					            	  # extra man pages
+	  man-pages	
+      playerctl # extra man pages
     mpv                               # video player
     ncdu                              # disk space
     openssl

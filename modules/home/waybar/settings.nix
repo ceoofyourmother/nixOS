@@ -11,7 +11,7 @@
     spacing = 5;
     modules-left = ["cpu" "memory" "hyprland/workspaces" "custom/weather"];
     modules-center= [
-        "custom/spotify"
+        "mpris"
     ];
     modules-right= ["pulseaudio" "clock" "tray"];
     clock= {
@@ -124,14 +124,47 @@
         on-click-right = "swaync-client -d -sw";
         escape = true;
     };
-    "custom/spotify" = {
-        exec = "python3 ~./.config/waybar/scripts/mediaplayer.py --player spotify";
-        format = "{} ";
-        return-type = "json";
-        on-click = "playerctl play-pause";
-        on-double-click-right ="playerctl next";
-        on-scroll-down = "playerctl previous";
+
+    "mpris" = {
+      title-len = 40;
+      interval =1;
+      album-len =0;
+      max-len = 60;
+      max-empty-time = 60;
+      format= "{player_icon} {artist} - {title}";
+      format-paused = "{player_icon} {artist} - {title}";
+      "player-icons" = {
+        default = "▶";
+        spotify = " ";
+        spotify-player = " ";
+      };
+      "status-icons" = {
+        paused = "";
+      };
+      ignored-players = ["librewolf" "vlc" "firefox"];
+    };
+
+    "mpd" = {
+      format = "{stateIcon} {artist} - {title}";
+      format-disconnected = "Disconnected ";
+      format-stopped = "{stateIcon} {artist} - {title}";
+      format-empty = "";
+      interval = 1;
+      on-click = "mpc toggle";
+      consume-icons = {
+        on = " "; # Icon shows only when "consume" is on
+      };
+      repeat-icons = {
+        on = " ";
+      };
+      single-icons = {
+        on = "  1 ";
+      };
+      state-icons = {
+        paused = " ";
+        playing = " ";        
     };
   };
+};
 }
 
