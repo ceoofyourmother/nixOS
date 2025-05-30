@@ -1,0 +1,45 @@
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    vesktop # If you prefer this
+
+    (discord.override {
+     withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
+  ];
+xdg.configFile."vesktop/themes/custom.css".text = ''
+
+@import url("https://discord-mica.pages.dev/src/main.css");
+
+ :root {
+  /*Dark mode*/
+  --dark-bg: rgba(0, 0, 0, 0.68); /*rgba(240,185,190,0.113); to achieve screenshot looking*/
+  --dark-flyout: rgba(30,30,30);
+  --dark-accent: rgb(76, 194, 255);
+  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent-font-color: black;
+  --dark-button: rgb(45,45,45);
+  --dark-button-border: rgb(60, 60, 60);
+  --dark-button-font-color: white;
+  --dark-background-accent: rgba(50,50,50,0.9);
+  --dark-status-panel: rgba(30,30,30,0.4);
+␍
+  /*Light mode*/
+  --light-bg: transparent;
+  --light-flyout: rgb(255, 255, 255);
+  --light-accent: rgb(0, 120, 212);
+  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent-font-color: white;
+  --light-button: rgb(251,251,251);
+  --light-button-border: rgb(204, 204, 231);
+  --light-button-font-color: black;
+  --light-background-accent: rgba(160,160,160,0.9);
+  --light-status-panel: rgba(255,255,255,0.4);
+
+  /* Titlebar */
+  --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */␍
+ --title-bar-icon: flex; /* Set to none to remove icons */
+
+'';
+
+}
