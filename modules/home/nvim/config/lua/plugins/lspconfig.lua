@@ -9,15 +9,28 @@ return {
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
       end,
-
       opts = {
         servers = {
-
-          tsserver = {},
-          rust_analyzer = function(_, opts)
-            require("rust-tools").setup({ server = opts })
-            return true
-          end,
+          rust_analyzer = {
+            mason = false,
+            cmd = { vim.fn.expand("~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer") },
+            settings = {
+              ["rust-analyzer"] = {
+                granularity = {
+                  group = "module",
+                },
+                prefix = "self",
+              },
+              cargo = {
+                buildScripts = {
+                  enable = true,
+                },
+              },
+              procMacro = {
+                enable = true,
+              },
+            },
+          },
         },
         setup = {
           tsserver = function(_, opts)
