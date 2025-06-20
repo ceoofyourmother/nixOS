@@ -126,6 +126,7 @@
     };
 
     "mpris" = {
+      player = "spotify";
       title-len = 40;
       interval =1;
       album-len =0;
@@ -141,7 +142,6 @@
       "status-icons" = {
         paused = "";
       };
-      ignored-players = ["librewolf" "vlc" "firefox"];
     };
 
     "mpd" = {

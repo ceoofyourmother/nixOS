@@ -4,6 +4,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
+    backupFileExtension = "bkp";
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports = 
@@ -20,7 +21,8 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "qemu-libvirtd" "libvirtd" 
+         "wheel" "video" "audio" "disk" "networkmanager" ];
     shell = pkgs.zsh;
   };
   nix.settings.allowed-users = [ "${username}" ];

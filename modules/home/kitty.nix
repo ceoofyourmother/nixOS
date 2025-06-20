@@ -13,7 +13,7 @@
       selection_foreground = "#3d59a1";
       selection_background = "#16161e";
       confirm_os_window_close = 0;
-      background_opacity = "0.5";  
+      background_opacity = "0.6";  
       window_padding_width = 10;
       scrollback_lines = 10000;
       enable_audio_bell = false;
