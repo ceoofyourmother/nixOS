@@ -4,6 +4,7 @@
        [ (import ./bootloader.nix) ]
     ++ [ (import ./hardware.nix) ]
     ++ [ (import ./xserver.nix) ]
+    ++ [ (import ./nvidia.nix)]
     ++ [ (import ./network.nix) ]
     ++ [ (import ./pipewire.nix) ]
     ++ [ (import ./program.nix) ]

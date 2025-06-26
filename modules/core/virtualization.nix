@@ -68,10 +68,13 @@ mode = "0755"; # make it executable and world (?) readable
     };
     docker = {
       enable = true;
+         enableOnBoot = true;
+      package = pkgs.docker_25;
     };
     spiceUSBRedirection.enable = true;
   };
- 
+
+  hardware.nvidia-container-toolkit.enable = true;
   services.spice-vdagentd.enable = true;
   systemd.services.libvirtd.preStart = ''
     mkdir -p /var/lib/libvirt/hooks
