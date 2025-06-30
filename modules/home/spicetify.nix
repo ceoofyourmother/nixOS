@@ -15,8 +15,9 @@ in
      enabledExtensions = with spicePkgs.extensions; [
        hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)
+       beautifulLyrics
      ];
-     #theme = spicePkgs.themes.catppuccin;
+     theme = spicePkgs.themes.lucid;
      #colorScheme = "mocha";
   };
 }
