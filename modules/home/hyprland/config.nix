@@ -19,6 +19,7 @@
         "swaync &"
         "wl-paste --watch cliphist store &"
         "hyprlock"
+        "exec-once = fcitx5"
         #bluetooth
         "blueman-apple"
       ];

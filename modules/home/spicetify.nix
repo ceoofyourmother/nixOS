@@ -11,13 +11,13 @@ in
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
   programs.spicetify = {
-    enable = false;
+    enable = true;
      enabledExtensions = with spicePkgs.extensions; [
-       hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)
        beautifulLyrics
      ];
-     theme = spicePkgs.themes.lucid;
-     #colorScheme = "mocha";
+
+     #theme = spicePkgs.themes.catppuccin;
+     colorScheme = "Ocean";
   };
 }
