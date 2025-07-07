@@ -5,6 +5,8 @@
     ++ [ (import ./hardware.nix) ]
     ++ [ (import ./xserver.nix) ]
     ++ [ (import ./nvidia.nix)]
+    ++ [ (import ./vfio.nix)]
+    ++ [ (import ./i18n.nix)]
     ++ [ (import ./network.nix) ]
     ++ [ (import ./pipewire.nix) ]
     ++ [ (import ./program.nix) ]

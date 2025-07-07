@@ -5,7 +5,7 @@ in
 {
   home.packages = (with pkgs; [
     _2048
-    
+
     audacity
     bitwise                           # cli tool for bit / hex manipulation
     cbonsai                           # terminal screensaver
@@ -34,11 +34,13 @@ in
     soundwireserver                   # pass audio to android phone
     tdf                               # cli pdf viewer
     todo                              # cli todo list
+    ani-cli
     spotify
     toipe                             # typing test in the terminal
     valgrind                          # c memory analyzer
     yazi                              # terminal file manager
     yt-dlp-light
+    waypaper
     zenity
     winetricks
     wineWowPackages.wayland

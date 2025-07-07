@@ -8,10 +8,9 @@
   bluetooth.powerOnBoot = true;
     graphics = {
       enable = true;
-      extraPackages = with pkgs; [
-    
+      extraPackages = with pkgs; [ 
       ];
     };
-  };
+  }; 
   hardware.enableRedistributableFirmware = true;
 }

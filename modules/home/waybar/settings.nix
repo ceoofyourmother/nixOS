@@ -13,7 +13,7 @@
     modules-center= [
         "mpris"
     ];
-    modules-right= ["pulseaudio" "clock" "tray"];
+    modules-right= ["pulseaudio" "clock"  "custom/notification" "tray"];
     clock= {
         format = "󰃰  {:%a, %b %e %H:%M }";
         tooltip= "true";

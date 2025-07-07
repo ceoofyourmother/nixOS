@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       
-	  #monitor=["HDMI-A-1,preferred, 0x0, 1" "DP-1,preferred,2560x-510,1,transform,1"]; 
+	  monitor=["HDMI-A-2,preferred, 0x0, 1"]; 
 
       # autostart
       exec-once = [
@@ -12,13 +12,14 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
         "nm-applet &"
         "wl-clip-persist --clipboard both"
-        "swaybg -m fill -i $(find ~/Pictures/wallpapers/wallpaper2.png -maxdepth 1 -type f) &"
+        "waypaper --restore &"
         "hyprctl setcursor Nordzy-cursors 22 &"
         "poweralertd &"
 	"waybar &"
         "swaync &"
         "wl-paste --watch cliphist store &"
         "hyprlock"
+        #"exec dbus-run-session -- /usr/bin/env"
         #bluetooth
         "blueman-apple"
       ];
@@ -36,7 +37,7 @@
 
       general = {
         "$mainMod" = "SUPER";
-        layout = "dwindle";
+        layout = "dwinde";
         gaps_in = 5;
         gaps_out = 8;
         border_size = 0;
@@ -95,7 +96,9 @@
         #"col.shadow_inactive" = "0x0";
       };
 
-      blurls=["waybar" "lockscreen" "fuzzel"];
+      blurls=["waybar" "lockscreen" "fuzzel" "swaync-control-center" "swaync-notification-window"];
+
+      layerrule = ["ignorezero, swaync-notification-window"  "ignorezero, swaync-control-center"];
 
       animations = {
         enabled = true;
@@ -115,7 +118,7 @@
           "windowsMove, 1, 2, easeinoutsine, slide" # everything in between, moving, dragging, resizing.
           "windows,1,4,overshot,popin"
 
-
+  
           # Fade
           "fade,1,10,default"
           "fadeIn, 1, 3, easeOutCubic" # fade in (open) -> layers and windows

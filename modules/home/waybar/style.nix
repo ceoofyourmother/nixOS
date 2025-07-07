@@ -4,20 +4,19 @@ let custom = {
     font_size = "15px";
     font_weight = "bold";
     text_color = "#6a92d7";
-    background = "rgba(26, 27, 38, 0.5)";
+    background = "rgba(12, 21, 38, 1)";
+    #border-radius = "0px";
 };
 in 
 {
   programs.waybar.style = ''
-
-
 window#waybar {
-  background-color: rgba(126, 127, 138, 0.5);
+  background-color: rgba(28, 28, 28, 0.78);
   color: #fff;
   transition-property: background-color;
   transition-duration: 0.5s;
   border-top: transparent;
-  /* border-radius: 8px; */
+   border-radius: 0px;
   transition-duration: 0.5s;
   /* margin: 16px 16px; */
 }
@@ -28,7 +27,7 @@ window#waybar.hidden {
 
 #workspaces button {
   padding: 0 5px;
-  color: #cdd6f4;
+  color: #13100F;
   opacity: 0.8;
   background-color: transparent;
   /* Use box-shadow instead of border so the text isn't offset */
@@ -39,11 +38,11 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  color: #2E62A6;
+  color: #B80604;
 }
 
 #workspaces button.active {
-  color: #2E62A6;
+  color: #B80604;
 }
 
 #workspaces button.urgent {

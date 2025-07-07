@@ -25,13 +25,13 @@
 command=$2
 
 if [ "$command" = "started" ]; then
-    systemctl set-property --runtime -- system.slice AllowedCPUs=3-5
-    systemctl set-property --runtime -- user.slice AllowedCPUs=3-5
-    systemctl set-property --runtime -- init.scope AllowedCPUs=3-5
+    systemctl set-property --runtime -- system.slice AllowedCPUs=4-7
+    systemctl set-property --runtime -- user.slice AllowedCPUs=4-7
+    systemctl set-property --runtime -- init.scope AllowedCPUs=4-7
 elif [ "$command" = "release" ]; then
-    systemctl set-property --runtime -- system.slice AllowedCPUs=0-5
-    systemctl set-property --runtime -- user.slice AllowedCPUs=0-5
-    systemctl set-property --runtime -- init.scope AllowedCPUs=0-5
+    systemctl set-property --runtime -- system.slice AllowedCPUs=0-15
+    systemctl set-property --runtime -- user.slice AllowedCPUs=0-15
+    systemctl set-property --runtime -- init.scope AllowedCPUs=0-15
 fi
   '';
 
@@ -50,6 +50,7 @@ mode = "0755"; # make it executable and world (?) readable
     ];
       enable = true;
       qemuSwtpm = true;
+        qemuOvmf = true;
       qemu = {
         runAsRoot = true;
         package = pkgs.qemu_kvm;  # Mudado para qemu_full para suporte completo

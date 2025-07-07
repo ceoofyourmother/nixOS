@@ -20,12 +20,18 @@
     ];
   };
 
+  systemd.user.services.vesktop = {
+      script = '' 
+      exec dbus-run-session -- /usr/bin/env
+      '';
+    };
+
   environment.systemPackages = with pkgs; [
     wget
     git
   ];
 
-  time.timeZone = "Japan/Tokyo";
+  time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";

@@ -5,6 +5,10 @@
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;
     fstrim.enable = true;
+    openssh = {
+        enable = true;
+        ports = [22];
+      };
   };
           services.xserver.videoDrivers = ["nvidia"];
           
