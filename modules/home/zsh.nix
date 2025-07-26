@@ -12,6 +12,15 @@
     initExtraFirst = ''
       DISABLE_MAGIC_FUNCTIONS=true
       export "MICRO_TRUECOLOR=1"
+
+      export PNPM_HOME="$HOME/.local/share/pnpm"
+
+# Adiciona o diretório de executáveis do pnpm ao seu PATH
+# O 'case' evita adicionar o caminho várias vezes se você recarregar o shell
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
     '';
     shellAliases = {
       # record = "wf-recorder --audio=alsa_output.pci-0000_08_00.6.analog-stereo.monitor -f $HOME/Videos/$(date +'%Y%m%d%H%M%S_1.mp4')";

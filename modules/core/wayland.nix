@@ -11,7 +11,10 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    # xwaylandvideobridge
+
+  environment.systemPackages = [
+   (pkgs.ollama.override { 
+      acceleration = "cuda";
+    })
   ];
 }

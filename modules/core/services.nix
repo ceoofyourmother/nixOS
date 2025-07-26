@@ -1,4 +1,4 @@
-{ ... }: 
+{ pkgs, ... }: 
 {
   services = {
     gvfs.enable = true;
@@ -10,9 +10,12 @@
         ports = [22];
       };
   };
-          services.xserver.videoDrivers = ["nvidia"];
-          
-        hardware.nvidia ={
+    environment.systemPackages = with pkgs; [
+     pkgs.gnome.gnome-remote-desktop
+  ];
+  services.gnome.gnome-remote-desktop.enable = true;
+   services.xserver.videoDrivers = [ "nvidia" ];
+     hardware.nvidia ={
                 modesetting.enable = true;
                 powerManagement.enable = false;
                 powerManagement.finegrained = false;
@@ -29,4 +32,21 @@
     # don’t shutdown when power button is short-pressed
     HandlePowerKey=ignore
   '';
+  
+    services.avahi = {
+    enable = true;
+    nssmdns = true;  # printing
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+      userServices = true;
+    };
+  };
+
+  services.ollama = {
+  enable = true;
+  # Optional: preload models, see https://ollama.com/library
+};
+
 }

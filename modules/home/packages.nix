@@ -43,7 +43,10 @@ in
     waypaper
     zenity
     winetricks
+    google-chrome
     wineWowPackages.wayland
+    logisim-evolution
+    steam-run
 
     #Dev
     gcc

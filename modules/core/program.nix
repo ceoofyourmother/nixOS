@@ -7,6 +7,7 @@
     enableSSHSupport = true;
     # pinentryFlavor = "";
   };
+  programs.steam.enable = true;
 programs.direnv.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];

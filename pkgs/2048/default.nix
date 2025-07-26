@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-DqOSfKQC7WdslEknzFByZPc20AsjX6+5PwKR3gqucOM="; 
   };
 
-  buildInputs = [ ];
+  buildInputs = [ libglvnd];
 
   buildPhase = ''
     make release

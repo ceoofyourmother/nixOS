@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       
-	  monitor=["HDMI-A-2,preferred, 0x0, 1"]; 
+	  monitor=["HDMI-A-2, preferred, 0x0, 1" "monitor=dummy, 1920x1080@60, 2808x1080, 1"]; 
 
       # autostart
       exec-once = [

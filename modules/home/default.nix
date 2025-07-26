@@ -12,7 +12,9 @@
     ++ [(import ./git.nix)]                       # version control
     ++ [(import ./gtk.nix)]                       # gtk theme
     ++ [(import ./hyprland)]                      # window manager
-    ++ [(import ./kitty.nix)]                     # terminal
+    ++ [(import ./kitty.nix)] 
+    ++ [(import ./wallpaperengine.nix)]
+    #++ [(import ./ollama.nix)] # terminal
    # ++ [(import ./alacritty.nix)]
     ++ [(import ./swaync/swaync.nix)]             # notification deamon
     ++ [(import ./micro.nix)]                     # nano replacement

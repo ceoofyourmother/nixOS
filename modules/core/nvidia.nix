@@ -9,7 +9,7 @@
         };
 
         #For nixos-unstable, they renamed it
-        #hardware.graphics.enable = true;
+        hardware.graphics.enable = true;
 
         services.xserver.enable = true;
         services.xserver.videoDrivers = ["nvidia"];

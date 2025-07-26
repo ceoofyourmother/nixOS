@@ -1,4 +1,4 @@
-{ self, pkgs, lib, inputs, ...}: 
+{ self, config, pkgs, lib, inputs, ...}: 
 {
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
@@ -29,7 +29,18 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    looking-glass-client
   ];
+
+
+systemd.tmpfiles.rules = [
+    "f /dev/shm/scream 0660 root qemu-libvirtd -"
+    "f /dev/shm/looking-glass 0660 root qemu-libvirtd -"
+  ];
+
+    systemd.services.gnome-remote-desktop = {
+      wantedBy = [ "graphical.target" ];
+    };
 
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "en_US.UTF-8";

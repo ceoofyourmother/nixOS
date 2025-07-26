@@ -15,6 +15,7 @@
     virtio-win
     win-spice
     adwaita-icon-theme
+    looking-glass-client
     qemu_kvm  # Para ter emulação completa, não apenas KVM
   ];
 
@@ -63,9 +64,6 @@ mode = "0755"; # make it executable and world (?) readable
           }).fd];
         };
       };
-
-
-
     };
     docker = {
       enable = true;
